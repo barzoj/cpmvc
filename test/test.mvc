@@ -1,0 +1,36 @@
+datamodel TestModel
+{
+	attr1 : string;
+	attr2 : int;
+	attr3 : float;
+}
+
+
+datamodel TestArray
+{
+	attr1 : vector of int;
+	attr2 : vector of vector of int;
+	attr3 : TestModel;
+}
+
+
+/*datamodel TestMap
+{
+	attr1 : map of TestModel with string;
+	attr1 : map of int with float;
+	attr1 : map of TestArray with NoType;
+}*/
+
+controller TestController
+{
+	remove( param1 : TestArray, param2 : int ) : int;
+	remove( param1 : TestArray, param2 : int ) : int;	
+	remove( param2 : TestArray );
+	put( param : string );
+	test( param : vector of TestModel );
+}
+
+interface test
+{
+	all() : int;
+}
